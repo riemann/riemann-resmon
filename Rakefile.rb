@@ -13,13 +13,14 @@ gemspec = Gem::Specification.new do |s|
 
   s.name = 'riemann-resmon'
   s.version = '0.1.0'
+  s.license = 'MIT'
   s.author = 'Gavin Sandie'
   s.email = 'beach@vicecity.co.uk'
   s.homepage = 'https://github.com/riemann/riemann-resmon'
   s.platform = Gem::Platform::RUBY
   s.summary = 'Submits resmon stats to riemann.'
 
-  s.add_dependency 'riemann-tools', '>= 0.1.4'
+  s.add_dependency 'riemann-tools', '~> 0.2.18'
   s.add_dependency 'faraday', '>= 0.8.5'
   s.add_dependency 'nokogiri', '>= 1.5.6'
 
@@ -27,7 +28,7 @@ gemspec = Gem::Specification.new do |s|
   s.executables |= Dir.entries('bin/')
   s.has_rdoc = false
 
-  s.required_ruby_version = '>= 1.8.7'
+  s.required_ruby_version = '>= 2.0.0'
 end
 
 Gem::PackageTask.new gemspec do |p|
